@@ -208,3 +208,40 @@ for (let key in user8){
     
 }
 console.log(user8); // { name: 'Tom', surname: 'Stone', age: 25 }
+
+
+
+// TOP objects part
+
+// primitive data types dont have a link back to original value , if we copy them 
+
+let data = 42;
+let dataCopy = data;
+dataCopy = 43;
+
+console.log(data); // 42
+console.log(dataCopy); // 43
+
+// objects backtrack to original value if we copy them 
+
+const obj1 = { data: 42 };
+const objCopy = obj1;
+objCopy.data = 43;
+
+console.log(obj1); // { data: 43 }
+console.log(objCopy); // { data: 43 }
+
+
+// When we mutate an object that is referenced by multiple variables, the change will be visible 
+// through all those variables, since they all reference the same object. However, reassigning one of 
+// those variables to a new object will not also reassign the other variables. 
+
+let animal = { species: "dog" };
+let dog = animal;
+
+// reassigning animal variable with a completely new object
+animal = { species: "cat" };
+
+console.log(animal); // { species: "cat" }
+console.log(dog); // { species: "dog" }
+
