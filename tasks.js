@@ -113,3 +113,5 @@ multiplyNumeric(menu);
 console.log(menu);
 
 
+
+// Tasks from Arrays lesson 
