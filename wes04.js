@@ -89,7 +89,7 @@ console.log(sortByYearsLived());
 // Sort the people alphabetically by last name
 
 const peopleSorted = people.sort((lastChecked, nextChecked) => {
-    const [aLast, aFirst] = lastChecked.split(", ");
+    const [aLast, aFirst] = lastChecked.split(", "); // aFirst, bFirst left for readability
     const [bLast, bFirst] = nextChecked.split(", "); // using only aLast and bLast because we want 
     // to sort by family name only
     return aLast.localeCompare(bLast); // used to compare strings, cause " - " doesnt work for 
